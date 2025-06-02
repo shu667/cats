@@ -145,3 +145,24 @@ backgroundImg.onload = () => {
   const firstYear = yearSelect.value || Object.keys(yearlyData)[0];
   startAnimation(firstYear);
 };
+
+const bgm = document.getElementById("bgm");
+const toggleBtn = document.getElementById("toggleMusic");
+
+toggleBtn.addEventListener("click", () => {
+  if (bgm.paused) {
+    bgm.play();
+    toggleBtn.textContent = "🎵 暫停音樂";
+  } else {
+    bgm.pause();
+    toggleBtn.textContent = "🎶 播放音樂";
+  }
+});
+
+window.addEventListener("click", () => {
+  if (bgm.paused) {
+    bgm.play().catch(err => {
+      console.log("音樂播放失敗：", err);
+    });
+  }
+}, { once: true });
