@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+#controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+#monthDisplay {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#deathInfo {
+  font-size: 16px;
+  color: #ffe082;
+}
+
+canvas {
+  display: block;
+}
